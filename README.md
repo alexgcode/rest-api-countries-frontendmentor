@@ -103,3 +103,6 @@ This challenge is completely free. Please share it with anyone who will find it 
 - Use sass
 - Use grid
 - Use jquery o axios o a framework for api calls
+
+# Process
+- First I make a static layout of the jpg design with sass and grid

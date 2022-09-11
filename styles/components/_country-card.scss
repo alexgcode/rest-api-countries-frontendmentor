@@ -1,0 +1,17 @@
+.country-card {
+    color: white;
+    background-color: hsl(209, 23%, 22%);
+    width: 20rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.img {
+    background-image: './../../images/de.svg';
+    
+}
+
+.img img {
+    height: 100%;
+    width: 100%;
+}
