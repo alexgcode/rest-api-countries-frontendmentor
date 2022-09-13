@@ -256,13 +256,15 @@ input[type=checkbox], input[type=radio] {
 .countries-grid {
   display: grid;
   background-color: bisque;
-  grid-template-columns: auto auto auto auto;
+  grid-template: repeat(2, 1fr)/repeat(4, 1fr);
+  padding: 2rem;
+  gap: 2rem;
 }
 
 .country-card {
   color: white;
   background-color: hsl(209deg, 23%, 22%);
-  width: 20rem;
+  width: 15rem;
   display: flex;
   flex-direction: column;
 }
