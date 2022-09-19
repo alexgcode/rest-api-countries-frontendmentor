@@ -1,0 +1,19 @@
+.search-bar {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: min(100% - 3rem, 80rem);
+    height: 18vh;
+
+    &__text {
+        height: 3rem;
+        width: 29rem;
+    }
+
+    &__filter {
+        height: 3rem;
+        width: 12.5rem;
+    }
+}

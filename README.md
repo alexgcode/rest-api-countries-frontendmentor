@@ -102,7 +102,11 @@ This challenge is completely free. Please share it with anyone who will find it 
 # Ojectives for this challenge
 - Use sass
 - Use grid
-- Use jquery o axios o a framework for api calls
+- Use jquery o axios o a framework for api calls ===> https://www.youtube.com/watch?v=4Fl5GH4eYZ8&ab_channel=Academind
+- Use jest to test api objects and babel for compatibility ===> https://www.youtube.com/watch?v=FgnxcUQ5vho&ab_channel=WebDevSimplified
 
 # Process
 - First I make a static layout of the jpg design with sass and grid
+
+# resources
+- fetch to api call https://www.youtube.com/watch?v=F6j_V6FUYTI&ab_channel=hdeleon.net

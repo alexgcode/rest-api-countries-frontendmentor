@@ -1,7 +1,8 @@
 .countries-grid {
     display: grid;
-    background-color: bisque;
     grid-template: repeat(2, 1fr) / repeat(4, 1fr);
-    padding: 2rem;
-    gap: 2rem;
+    gap: 4.5rem;
+    width: min(100% - 3rem, 80rem);
+    margin: 0 auto 0 auto;
+    padding-bottom: 3rem;
 }

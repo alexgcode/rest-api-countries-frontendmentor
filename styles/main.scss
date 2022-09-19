@@ -12,11 +12,14 @@
     'vendors/normalize';
 
 @import 
+    'base/base';
+
+@import 
     'layout/header',
     'layout/main',
     'layout/grid';
 
 @import
     'components/country-card',
-    'components/search';
+    'components/search-bar';
 
