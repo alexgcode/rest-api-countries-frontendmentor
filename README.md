@@ -107,6 +107,15 @@ This challenge is completely free. Please share it with anyone who will find it 
 
 # Process
 - First I make a static layout of the jpg design with sass and grid
+- adding a call to the api with fetch
+
+# TODO
+- display with js the 8 cards on the grid
+- add the search
+- add the filter
+- ad the detail page
+- add the toggle dark mode
 
 # resources
-- fetch to api call https://www.youtube.com/watch?v=F6j_V6FUYTI&ab_channel=hdeleon.net
+- fetch to api call https://www.youtube.com/watch?v=uxf0--uiX0I&ab_channel=TheCodingTrain
+- como usar el localstorasge https://www.youtube.com/watch?v=F6j_V6FUYTI&ab_channel=hdeleon.net
