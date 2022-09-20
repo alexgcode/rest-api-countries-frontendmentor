@@ -8,7 +8,8 @@
 
     &__image {
         border-radius: 0.3rem 0.3rem 0 0;
-        background: url('./../../images/de.svg');
+        background-image: url('./../../images/de.png');
+        background-position: center;
         background-size: cover;
         width: 100%;
         height: 10rem;
