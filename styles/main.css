@@ -266,12 +266,19 @@ input[type=checkbox], input[type=radio] {
   background-color: hsl(207deg, 26%, 17%);
 }
 
+.list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
 .countries-grid {
   display: grid;
   grid-template: repeat(2, 1fr)/repeat(4, 1fr);
   gap: 4.5rem;
-  width: min(100% - 3rem, 80rem);
+  width: min(100% - 5rem, 80rem);
   margin: 0 auto 0 auto;
+  padding-left: 0;
   padding-bottom: 3rem;
 }
 
@@ -293,9 +300,14 @@ input[type=checkbox], input[type=radio] {
 }
 .country-card__text {
   font-size: 0.8rem;
+  padding: 2rem;
 }
 .country-card__name {
   font-size: 1rem;
+  margin: 0 0 1rem 0;
+}
+.country-card__attribute {
+  margin: 0 0 0.5rem 0;
 }
 .country-card__category {
   font-weight: bold;

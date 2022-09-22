@@ -5,7 +5,7 @@
     border-radius: 0.3rem;
     display: flex;
     flex-direction: column;
-
+    
     &__image {
         border-radius: 0.3rem 0.3rem 0 0;
         background-image: url('./../../images/de.png');
@@ -17,10 +17,17 @@
 
     &__text {
         font-size: 0.8rem;
+        padding: 2rem;
     }
 
     &__name {
         font-size: 1rem;
+        margin: 0 0 1rem 0;
+        //text-align: center;
+    }
+
+    &__attribute {
+        margin: 0 0 0.5rem 0;
     }
 
     &__category {
