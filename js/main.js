@@ -4,9 +4,19 @@ fetch('https://restcountries.com/v3.1/alpha?codes=ger,usa,br,is,afg,alb,alg,ax')
     .then(json => console.log(json));
 */
 const grid = document.querySelector(".countries-grid");
-let searchValue = 'alpha?codes=ger,usa,br,is,afg,alb,alg,ax&&';
+const searchValue = 'alpha?codes=ger,usa,br,is,afg,alb,alg,ax&&';
+const api_url = 'https://restcountries.com/v3.1/all'; //alpha?codes=ger,usa,br,is,afg,alb,alg,ax&&fields=name,capital,region,population,flags';
+let countriesList = [];
+
+function removeAllChildNodes(parent) {
+    console.log(parent.firstChild);
+    while (parent.firstChild) {
+        parent.removeChild(parent.firstChild);
+    }
+}
 
 function createDataGrid(data, grid) {
+    grid.innerHTML = '';
     data.forEach(country => {
         let card = document.createElement("div");
         card.className = 'country-card';
@@ -33,10 +43,7 @@ function createDataGrid(data, grid) {
         let cardCap = document.createElement("p");
         cardCap.className = 'country-card__attribute';
         cardCap.innerHTML = '<span class="country-card__category">Capital: </span>' +  country.capital;
-
-
-        //card.innerHTML = country.name.common;
-
+        
         grid.appendChild(card);
         card.appendChild(cardImage);
         card.appendChild(cardText);
@@ -45,65 +52,28 @@ function createDataGrid(data, grid) {
             cardText.appendChild(cardReg);
             cardText.appendChild(cardCap);
         
-
-        console.log(country.name.common);
     });
 }
 
-//console.log(grid);
-const api_url = 'https://restcountries.com/v3.1/alpha?codes=ger,usa,br,is,afg,alb,alg,ax&&fields=name,capital,region,population,flags';
-async function getHomeCountries() {
-    const response = await fetch (api_url);
-    const data =  await response.json();
-    createDataGrid(data, grid);
-}
 
-getHomeCountries();
+//load grid
+window.addEventListener('DOMContentLoaded', async () => {
+    grid.innerHTML = "<h1 style='color:white; grid-row: 1; grid-column: 3;'>Loading...</h1>";
+    countriesList = await loadCountries();
+    createDataGrid(countriesList, grid);
+});
 
-function removeChildren(element) {
-    while (element.firstChild) {
-        element.removeChild(element.lastChild);
-     }
+async function loadCountries() {
+    const response = await fetch(api_url);
+    return await response.json();
 }
 
 
 /* ----------------- filter to api ---------------*/
 const searchInput = document.querySelector(".search-bar__text");
 searchInput.addEventListener('keyup', e => {
-    console.log(searchInput.value);
-    let api_search;
-    if(searchInput.value != '') {
-        api_search = `https://restcountries.com/v3.1/name/${searchInput.value}?fields=name,capital,region,population,flags`;
-    }else {
-        api_search = 'https://restcountries.com/v3.1/all';
-    }
-
-    if (e.key === 'Enter' || e.keyCode === 13) {
-        console.log(api_search);
-        
-        fetch(api_search)
-        .then((response) => data = response.json())
-        .then((data) => {
-            removeChildren(grid);
-            console.log(data);
-            createDataGrid(data,grid);
-        });
-        /*
-        async function result() {
-            await new Promise((resolve, reject) => {
-                removeChildren(grid);
-                resolve();
-            })
-            
-            fetch(api_search)
-                .then((response) => data = response.json())
-                .then((data) => {
-                    console.log(data);
-                    createDataGrid(data,grid);
-                });
-        }
-        result();
-        */        
-    }
+    const c = countriesList.filter(country => country.name.common.toUpperCase().includes(searchInput.value.toUpperCase()));
+    console.log(c);
+    createDataGrid(c,grid);
 });
 
