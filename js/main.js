@@ -5,8 +5,9 @@ fetch('https://restcountries.com/v3.1/alpha?codes=ger,usa,br,is,afg,alb,alg,ax')
 */
 const grid = document.querySelector(".countries-grid");
 const searchValue = 'alpha?codes=ger,usa,br,is,afg,alb,alg,ax&&';
-const api_url = 'https://restcountries.com/v3.1/all'; //alpha?codes=ger,usa,br,is,afg,alb,alg,ax&&fields=name,capital,region,population,flags';
+const api_url = 'https://restcountries.com/v3.1/all?fields=name,capital,region,population,flags,region'; //alpha?codes=ger,usa,br,is,afg,alb,alg,ax&&fields=name,capital,region,population,flags';
 let countriesList = [];
+let displayedCountries = [];
 
 function removeAllChildNodes(parent) {
     console.log(parent.firstChild);
@@ -69,11 +70,26 @@ async function loadCountries() {
 }
 
 
-/* ----------------- filter to api ---------------*/
+/* ----------------- search filter to api ---------------*/
 const searchInput = document.querySelector(".search-bar__text");
 searchInput.addEventListener('keyup', e => {
-    const c = countriesList.filter(country => country.name.common.toUpperCase().includes(searchInput.value.toUpperCase()));
-    console.log(c);
+    const c = countriesList.filter(country => {
+        return country.name.common.toUpperCase().includes(searchInput.value.toUpperCase()) 
+                && country.region.toUpperCase().includes(dropdownFilter.value.toUpperCase());
+    });
+    //console.log(c);
     createDataGrid(c,grid);
+});
+
+
+/*--------- dropdown filter --------------*/
+const dropdownFilter = document.querySelector(".search-bar__filter");
+dropdownFilter.addEventListener('change', e => {
+    const c = countriesList.filter(country => {
+        return country.region.toUpperCase().includes(dropdownFilter.value.toUpperCase()) 
+                    && (country.name.common.toUpperCase().includes(searchInput.value.toUpperCase()));
+    });
+    createDataGrid(c,grid);
+    console.log(dropdownFilter.value);
 });
 
