@@ -21,8 +21,12 @@
     }
 
     &__name {
+        display: inline-block;
         font-size: 1rem;
         margin: 0 0 1rem 0;
+        text-decoration: none;
+        color: white;
+        font-weight: 700;
         //text-align: center;
     }
 

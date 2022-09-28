@@ -272,12 +272,32 @@ input[type=checkbox], input[type=radio] {
 
 .countries-grid {
   display: grid;
-  grid-template: repeat(2, 1fr)/repeat(4, 1fr);
+  grid-template: repeat(2, 1fr)/repeat(auto-fill, minmax(min(100%, 200px), 1fr));
   gap: 4.5rem;
-  width: min(100% - 5rem, 80rem);
+  width: min(100% - 7rem, 80rem);
   margin: 0 auto 0 auto;
   padding-left: 0;
   padding-bottom: 3rem;
+}
+
+.detail {
+  display: grid;
+  grid-template: 1fr/repeat(2, 1fr);
+  color: white;
+  width: min(100% - 3rem, 80rem);
+  margin: 0 auto 0 auto;
+  gap: 5rem;
+}
+.detail__image {
+  background-image: url("./../../images/de.svg");
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 25rem;
+}
+.detail__text {
+  grid-row: 1;
+  grid-column: 2;
 }
 
 .country-card {
@@ -301,8 +321,12 @@ input[type=checkbox], input[type=radio] {
   padding: 2rem;
 }
 .country-card__name {
+  display: inline-block;
   font-size: 1rem;
   margin: 0 0 1rem 0;
+  text-decoration: none;
+  color: white;
+  font-weight: 700;
 }
 .country-card__attribute {
   margin: 0 0 0.5rem 0;

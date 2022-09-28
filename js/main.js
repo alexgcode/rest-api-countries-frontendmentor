@@ -29,7 +29,8 @@ function createDataGrid(data, grid) {
         let cardText = document.createElement("div");
         cardText.className = 'country-card__text';
 
-        let cardName = document.createElement("h3");
+        let cardName = document.createElement("a");
+        cardName.href = 'detail.html?country='+encodeURIComponent(country.name.common);
         cardName.className = 'country-card__name';
         cardName.innerText = country.name.common;
 

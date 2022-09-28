@@ -109,6 +109,7 @@ This challenge is completely free. Please share it with anyone who will find it 
 - First I make a static layout of the jpg design with sass and grid
 - adding a call to the api with fetch
 - display with js the 8 cards on the grid
+- use repeat(auto-fit, minmax(min(100%,200px),1fr)); to make the grid responsive
 
 # TODO
 
