@@ -280,24 +280,59 @@ input[type=checkbox], input[type=radio] {
   padding-bottom: 3rem;
 }
 
+.body {
+  height: 100%;
+}
+
+.back-bar {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: min(100% - 3rem, 80rem);
+  height: 22vh;
+}
+
 .detail {
   display: grid;
-  grid-template: 1fr/repeat(2, 1fr);
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 25rem), 1fr));
   color: white;
   width: min(100% - 3rem, 80rem);
   margin: 0 auto 0 auto;
-  gap: 5rem;
+  gap: 10rem;
 }
 .detail__image {
   background-image: url("./../../images/de.svg");
   background-position: center;
   background-size: cover;
-  width: 100%;
   height: 25rem;
 }
 .detail__text {
-  grid-row: 1;
-  grid-column: 2;
+  display: flex;
+  flex-direction: column;
+  height: 25rem;
+}
+.detail__name {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+}
+.detail__stat {
+  font-weight: bold;
+}
+.detail__stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+}
+.detail__borders {
+  margin-top: auto;
+  margin-bottom: 3rem;
+}
+
+.first-column p {
+  margin: 1rem 0;
 }
 
 .country-card {
@@ -340,6 +375,7 @@ input[type=checkbox], input[type=radio] {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  flex-wrap: wrap;
   align-items: center;
   width: min(100% - 3rem, 80rem);
   height: 18vh;
