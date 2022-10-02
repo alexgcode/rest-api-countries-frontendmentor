@@ -291,7 +291,12 @@ input[type=checkbox], input[type=radio] {
   justify-content: space-between;
   align-items: center;
   width: min(100% - 3rem, 80rem);
-  height: 22vh;
+  height: 8rem;
+}
+@media screen and (min-width: 768px) {
+  .back-bar {
+    height: 22vh;
+  }
 }
 
 .detail {
@@ -300,13 +305,23 @@ input[type=checkbox], input[type=radio] {
   color: white;
   width: min(100% - 3rem, 80rem);
   margin: 0 auto 0 auto;
-  gap: 10rem;
+  gap: 1rem;
+}
+@media screen and (min-width: 1300px) {
+  .detail {
+    gap: 10rem;
+  }
 }
 .detail__image {
   background-image: url("./../../images/de.svg");
   background-position: center;
-  background-size: cover;
-  height: 25rem;
+  background-size: 100% 100%;
+  height: 15rem;
+}
+@media screen and (min-width: 500px) {
+  .detail__image {
+    height: 25rem;
+  }
 }
 .detail__text {
   display: flex;
@@ -316,8 +331,14 @@ input[type=checkbox], input[type=radio] {
 .detail__name {
   font-size: 2rem;
   font-weight: 700;
-  margin-top: 2.5rem;
-  margin-bottom: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 0.3rem;
+}
+@media screen and (min-width: 768px) {
+  .detail__name {
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+  }
 }
 .detail__stat {
   font-weight: bold;
@@ -325,10 +346,21 @@ input[type=checkbox], input[type=radio] {
 .detail__stats-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+  gap: 1.5rem;
+}
+@media screen and (min-width: 768px) {
+  .detail__stats-grid {
+    gap: 0;
+  }
 }
 .detail__borders {
-  margin-top: auto;
+  margin-top: 2rem;
   margin-bottom: 3rem;
+}
+@media screen and (min-width: 768px) {
+  .detail__borders {
+    margin-top: auto;
+  }
 }
 
 .first-column p {
