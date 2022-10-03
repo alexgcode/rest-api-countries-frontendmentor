@@ -8,10 +8,12 @@
     pages/
     themes/
 */
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;600;800&display=swap");
 :root {
   --element-bg: hsl(209deg, 23%, 22%);
   --body-bg: hsl(207deg, 26%, 17%);
   --text-color: white;
+  --shadow: black;
 }
 
 article,
@@ -251,6 +253,7 @@ input[type=checkbox], input[type=radio] {
   background-color: var(--body-bg);
   height: 100vh;
   box-sizing: border-box;
+  font-family: "Nunito Sans", sans-serif;
   -ms-overflow-style: none;
 }
 .body::-webkit-scrollbar {
@@ -259,11 +262,12 @@ input[type=checkbox], input[type=radio] {
 
 .header {
   background-color: var(--element-bg);
-  height: 9.5vh;
+  height: 5rem;
   display: flex;
   align-items: center;
   justify-content: center;
   color: var(--text-color);
+  box-shadow: 0 0.05rem 0.1rem var(--shadow);
 }
 .header__wrapper {
   width: min(100% - 3rem, 80rem);
@@ -273,7 +277,26 @@ input[type=checkbox], input[type=radio] {
 .header__title {
   margin: 0;
   font-size: 1.5rem;
+  font-weight: 800;
 }
+.header__toogle {
+  font-weight: 600;
+  display: flex;
+  text-align: center;
+  gap: 0.8rem;
+}
+.header__toogle .moon-light, .header__toogle .moon-dark {
+  display: none;
+  height: 1.2rem;
+  width: 1.2rem;
+}
+.header__toogle-text {
+  height: 1rem;
+}
+.header__toogle-text:hover {
+  cursor: pointer;
+}
+
 .list {
   list-style: none;
   margin: 0;
@@ -301,8 +324,21 @@ input[type=checkbox], input[type=radio] {
 }
 @media screen and (min-width: 768px) {
   .back-bar {
-    height: 22vh;
+    height: 12.5rem;
   }
+}
+.back-bar .btn-back {
+  box-sizing: border-box;
+  padding: 0.5rem 2rem;
+  background-color: var(--element-bg);
+  color: var(--text-color);
+  border: none;
+  box-shadow: 0.1rem 0.1rem 0.4rem black;
+  border-radius: 0.25rem;
+  font-weight: 800;
+}
+.back-bar .btn-back span {
+  margin-right: 1rem;
 }
 
 .detail {
@@ -406,6 +442,7 @@ input[type=checkbox], input[type=radio] {
 .country-card__text {
   font-size: 0.8rem;
   padding: 2rem;
+  font-weight: 300;
 }
 .country-card__name {
   display: inline-block;
@@ -413,13 +450,13 @@ input[type=checkbox], input[type=radio] {
   margin: 0 0 1rem 0;
   text-decoration: none;
   color: var(--text-color);
-  font-weight: 700;
+  font-weight: 800;
 }
 .country-card__attribute {
   margin: 0 0 0.5rem 0;
 }
 .country-card__category {
-  font-weight: bold;
+  font-weight: 600;
 }
 
 .search-bar {
@@ -430,7 +467,7 @@ input[type=checkbox], input[type=radio] {
   flex-wrap: wrap;
   align-items: center;
   width: min(100% - 3rem, 80rem);
-  height: 18vh;
+  height: 9.5rem;
 }
 .search-bar__text {
   height: 3rem;

@@ -10,8 +10,23 @@
 
     @media screen and (min-width: 768px) {
         & {
-            height: 22vh;
+            height: 12.5rem;
         }   
+    }
+    
+    .btn-back {
+        box-sizing: border-box;
+        padding:  0.5rem 2rem;
+        background-color: var(--element-bg);
+        color: var(--text-color);
+        border: none;
+        box-shadow: 0.1rem 0.1rem 0.4rem black;
+        border-radius: 0.25rem;
+        font-weight: 800;
+
+        & span {
+            margin-right: 1rem;
+        }
     }
 }
 

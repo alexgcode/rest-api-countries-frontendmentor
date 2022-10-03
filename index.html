@@ -17,8 +17,10 @@
         <div class="header__wrapper">
             <h1 class="header__title">Where in the world?</h1>
             <div class="header__toogle">
-                <label  for="darkmodeCheck">Dark mode</label>
-                <input id="darkmodeCheck" type="checkbox" onclick="updateDarkmode()">
+                <input hidden id="darkmodeCheck" type="checkbox" onclick="updateDarkmode()">
+                <img class="moon-dark" src="./images/moon_3.png" alt="moon icon">
+                <img class="moon-light" src="./images/moon_2.png" alt="moon icon">
+                <label class="header__toogle-text" for="darkmodeCheck">Dark Mode</label>
             </div>
             
         </div>

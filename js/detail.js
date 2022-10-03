@@ -5,6 +5,8 @@ async function loadCountries(api_url) {
 
 /*-----darkmode in localstorage----*/
 const darkmodeCheck = document.querySelector("#darkmodeCheck");
+const moonDark = document.querySelector(".moon-dark");
+const moonLight = document.querySelector(".moon-light");
 
 /*---default value---*/
 if(localStorage.getItem("darkmode") === null) {
@@ -19,12 +21,16 @@ function checkDarkmodeStatus() {
         root.style.setProperty('--element-bg','hsl(209, 23%, 22%)');
         root.style.setProperty('--body-bg','hsl(207, 26%, 17%)');
         root.style.setProperty('--text-color','white');
+        moonDark.style.display = 'block';
+        moonLight.style.display = 'none';
     }else {
         darkmodeCheck.checked = false;
         let root = document.querySelector(":root");
         root.style.setProperty('--element-bg','white');
         root.style.setProperty('--body-bg','hsl(0, 0%, 98%)');
         root.style.setProperty('--text-color','hsl(200, 15%, 8%)');
+        moonDark.style.display = 'none';
+        moonLight.style.display = 'block';
     }
 }
 checkDarkmodeStatus();
@@ -36,19 +42,26 @@ function updateDarkmode(){
         root.style.setProperty('--element-bg','white');
         root.style.setProperty('--body-bg','hsl(0, 0%, 98%)');
         root.style.setProperty('--text-color','hsl(200, 15%, 8%)');
+        moonDark.style.display = 'none';
+        moonLight.style.display = 'block';
     }else {
         localStorage.setItem("darkmode", "true");
         let root = document.querySelector(":root");
         root.style.setProperty('--element-bg','hsl(209, 23%, 22%)');
         root.style.setProperty('--body-bg','hsl(207, 26%, 17%)');
         root.style.setProperty('--text-color','white');
+        moonDark.style.display = 'block';
+        moonLight.style.display = 'none';
     }
 }
 
 
 /*--- loading data---*/
 window.onload = async function () {
-    
+
+    let body = document.querySelector(".body");
+    body.style.fontSize = '16px';
+
     let url = document.location.href;
     let params = url.split('?')[1].split('&');
     let data = {}, tmp;

@@ -128,3 +128,4 @@ This challenge is completely free. Please share it with anyone who will find it 
 - multiple calls in a loop https://stackoverflow.com/questions/37576685/using-async-await-with-a-foreach-loop
 - run js when dom is load https://www.devdungeon.com/content/run-javascript-after-dom-fully-loaded
 - hide scrollbars but keep functionality https://www.w3schools.com/howto/howto_css_hide_scrollbars.asp
+- validator of html markups https://validator.w3.org/#validate_by_input+with_options

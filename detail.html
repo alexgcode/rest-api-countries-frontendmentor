@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="./styles/main.css">
 
     <script defer src="./js/vendors/list.js"></script>
@@ -17,15 +18,17 @@
         <div class="header__wrapper">
             <h1 class="header__title">Where in the world?</h1>
             <div class="header__toogle">
-                <label  for="darkmodeCheck">Dark mode</label>
-                <input id="darkmodeCheck" type="checkbox" onclick="updateDarkmode()">
+                <input hidden id="darkmodeCheck" type="checkbox" onclick="updateDarkmode()">
+                <img class="moon-dark" src="./images/moon_3.png" alt="moon icon">
+                <img class="moon-light" src="./images/moon_2.png" alt="moon icon">
+                <label class="header__toogle-text" for="darkmodeCheck">Dark Mode</label>
             </div>
         </div>
     </header>
 
     <main class="main">
         <div class="back-bar">
-            <button class="btn-back" onclick="history.back()">back</button>
+            <button class="btn-back" onclick="history.back()"><span><i class="fa fa-long-arrow-left" aria-hidden="true"></i></span>back</button>
         </div>
         
 

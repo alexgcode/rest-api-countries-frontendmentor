@@ -1,10 +1,11 @@
 .header {
     background-color:  var(--element-bg);
-    height: 9.5vh;
+    height: 5rem;
     display: flex;
     align-items: center;
     justify-content: center;
     color: var(--text-color);
+    box-shadow: 0 0.05rem 0.1rem var(--shadow);
 
     &__wrapper {
         width: min(100% - 3rem, 80rem);
@@ -14,12 +15,29 @@
     
     &__title {
         margin: 0;
-        
         font-size: 1.5rem;
+        font-weight: 800;
     }
 
     &__toogle {
         //color: var(--text-color);
+        font-weight: 600;
+        display: flex;
+        text-align: center;
+        gap: 0.8rem;
+
+        .moon-light,.moon-dark {
+            display: none;
+            height: 1.2rem;
+            width: 1.2rem;
+        }
+    }
+
+    &__toogle-text {
+        height: 1rem;
+        &:hover {
+            cursor: pointer;
+        }
     }
 }
 
