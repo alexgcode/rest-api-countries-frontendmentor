@@ -398,7 +398,6 @@ input[type=checkbox], input[type=radio] {
 }
 .country-card__image {
   border-radius: 0.3rem 0.3rem 0 0;
-  background-image: url("./../../images/de.png");
   background-position: center;
   background-size: cover;
   width: 100%;

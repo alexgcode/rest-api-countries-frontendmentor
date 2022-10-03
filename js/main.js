@@ -26,6 +26,10 @@ function createDataGrid(data, grid) {
         cardImage.className = 'country-card__image';
         cardImage.style.backgroundImage = "url("+ country.flags.svg +")";
 
+        let cardLink = document.createElement("a");
+        cardLink.href = 'detail.html?country='+encodeURIComponent(country.name.common);
+        cardLink.appendChild(cardImage);
+
         let cardText = document.createElement("div");
         cardText.className = 'country-card__text';
 
@@ -47,7 +51,8 @@ function createDataGrid(data, grid) {
         cardCap.innerHTML = '<span class="country-card__category">Capital: </span>' +  country.capital;
         
         grid.appendChild(card);
-        card.appendChild(cardImage);
+        //card.appendChild(cardImage);
+        card.appendChild(cardLink);
         card.appendChild(cardText);
             cardText.appendChild(cardName);
             cardText.appendChild(cardPop);
