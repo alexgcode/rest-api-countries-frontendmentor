@@ -16,13 +16,16 @@
     <header class="header">
         <div class="header__wrapper">
             <h1 class="header__title">Where in the world?</h1>
-            <button class="header__toogle">Dark mode</button>
+            <div class="header__toogle">
+                <label  for="darkmodeCheck">Dark mode</label>
+                <input id="darkmodeCheck" type="checkbox" onclick="updateDarkmode()">
+            </div>
         </div>
     </header>
 
     <main class="main">
         <div class="back-bar">
-            <button class="btn-back">back</button>
+            <button class="btn-back" onclick="history.back()">back</button>
         </div>
         
 
@@ -50,11 +53,11 @@
                     
                 </div>
                     
-                <div class="detail__borders">
+                <div class="detail__borders-wrapper">
                     <span class="detail__stat">Border countries: </span> 
-                    <a href="#">link</a> 
-                    <a href="#">link</a> 
-                    <a href="#">link</a> 
+                    <div class="detail__borders-list">
+
+                    </div>
                 </div>
             </div>
         </div>

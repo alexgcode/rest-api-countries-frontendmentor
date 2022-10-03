@@ -113,12 +113,18 @@ This challenge is completely free. Please share it with anyone who will find it 
 
 # TODO
 
-- add the search with https://github.com/jiren/filter.js or in vanilla js https://www.youtube.com/watch?v=DgunJ2jMZwM&ab_channel=FaztCode to a json object loaded first
-- add the filter 
-- ad the detail page
+- add the search with https://github.com/jiren/filter.js or in vanilla js https://www.youtube.com/watch?v=DgunJ2jMZwM&ab_channel=FaztCode to a json object loaded first (done)
+- add the filter (done)
+- ad the detail page (done)
 - add the toggle dark mode
 
 # resources
 - fetch to api call https://www.youtube.com/watch?v=uxf0--uiX0I&ab_channel=TheCodingTrain
 - como usar el localstorasge https://www.youtube.com/watch?v=F6j_V6FUYTI&ab_channel=hdeleon.net
 - toggle css class with js https://www.javascripttutorial.net/javascript-dom/javascript-classlist/
+- back button https://www.w3schools.com/jsref/met_his_back.asp
+- darkmode loading css file with js https://www.youtube.com/watch?v=Jgx5hSoogMw&ab_channel=AlejandroMagnitopic
+- change root variable with js https://www.w3schools.com/css/css3_variables_javascript.asp
+- multiple calls in a loop https://stackoverflow.com/questions/37576685/using-async-await-with-a-foreach-loop
+- run js when dom is load https://www.devdungeon.com/content/run-javascript-after-dom-fully-loaded
+- hide scrollbars but keep functionality https://www.w3schools.com/howto/howto_css_hide_scrollbars.asp

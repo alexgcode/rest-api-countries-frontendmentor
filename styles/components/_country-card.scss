@@ -1,6 +1,6 @@
 .country-card {
-    color: white;
-    background-color: hsl(209, 23%, 22%);
+    color: var(--text-color);
+    background-color: var(--element-bg);
     height: 21rem;
     border-radius: 0.3rem;
     display: flex;
@@ -25,7 +25,7 @@
         font-size: 1rem;
         margin: 0 0 1rem 0;
         text-decoration: none;
-        color: white;
+        color: var(--text-color);
         font-weight: 700;
         //text-align: center;
     }

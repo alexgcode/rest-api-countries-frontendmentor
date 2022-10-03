@@ -1,0 +1,8 @@
+$darkElementBg: hsl(209, 23%, 22%);
+$darkBodyBg: hsl(207, 26%, 17%);
+
+:root {
+    --element-bg: #{$darkElementBg};
+    --body-bg: #{$darkBodyBg};
+    --text-color: white;
+}

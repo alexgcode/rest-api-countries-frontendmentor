@@ -63,6 +63,9 @@ window.addEventListener('DOMContentLoaded', async () => {
     grid.innerHTML = "<h1 style='color:white; grid-row: 1; grid-column: 3;'>Loading...</h1>";
     countriesList = await loadCountries();
     createDataGrid(countriesList, grid);
+    const body = document.querySelector(".body");
+    body.style.height = '100%';
+    dropdownFilter.value = "";
 });
 
 async function loadCountries() {
@@ -94,3 +97,50 @@ dropdownFilter.addEventListener('change', e => {
     console.log(dropdownFilter.value);
 });
 
+
+/*-----darkmode in localstorage----*/
+const darkmodeCheck = document.querySelector("#darkmodeCheck");
+
+/*---default value---*/
+if(localStorage.getItem("darkmode") === null) {
+    localStorage.setItem("darkmode", "false");
+}
+
+/*--update darkmode---*/
+function checkDarkmodeStatus() {
+    if(localStorage.getItem("darkmode") === "true"){
+        darkmodeCheck.checked = true;
+        let root = document.querySelector(":root");
+        root.style.setProperty('--element-bg','hsl(209, 23%, 22%)');
+        root.style.setProperty('--body-bg','hsl(207, 26%, 17%)');
+        root.style.setProperty('--text-color','white');
+    }else {
+        darkmodeCheck.checked = false;
+        let root = document.querySelector(":root");
+        root.style.setProperty('--element-bg','white');
+        root.style.setProperty('--body-bg','hsl(0, 0%, 98%)');
+        root.style.setProperty('--text-color','hsl(200, 15%, 8%)');
+    }
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+    checkDarkmodeStatus();
+});
+
+//checkDarkmodeStatus();
+
+function updateDarkmode(){
+    if(localStorage.getItem("darkmode") === "true"){
+        localStorage.setItem("darkmode", "false");
+        let root = document.querySelector(":root");
+        root.style.setProperty('--element-bg','white');
+        root.style.setProperty('--body-bg','hsl(0, 0%, 98%)');
+        root.style.setProperty('--text-color','hsl(200, 15%, 8%)');
+    }else {
+        localStorage.setItem("darkmode", "true");
+        let root = document.querySelector(":root");
+        root.style.setProperty('--element-bg','hsl(209, 23%, 22%)');
+        root.style.setProperty('--body-bg','hsl(207, 26%, 17%)');
+        root.style.setProperty('--text-color','white');
+    }
+}

@@ -1,9 +1,10 @@
 .header {
-    background-color:  hsl(209, 23%, 22%);
+    background-color:  var(--element-bg);
     height: 9.5vh;
     display: flex;
     align-items: center;
     justify-content: center;
+    color: var(--text-color);
 
     &__wrapper {
         width: min(100% - 3rem, 80rem);
@@ -13,8 +14,12 @@
     
     &__title {
         margin: 0;
-        color: white;
+        
         font-size: 1.5rem;
+    }
+
+    &__toogle {
+        //color: var(--text-color);
     }
 }
 
