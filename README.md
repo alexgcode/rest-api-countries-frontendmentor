@@ -116,7 +116,8 @@ This challenge is completely free. Please share it with anyone who will find it 
 - add the search with https://github.com/jiren/filter.js or in vanilla js https://www.youtube.com/watch?v=DgunJ2jMZwM&ab_channel=FaztCode to a json object loaded first (done)
 - add the filter (done)
 - ad the detail page (done)
-- add the toggle dark mode
+- add the toggle dark mode (done)
+- add custom selector https://codepen.io/RajRajeshDn/pen/XWJYMzZ (https://codepen.io/STKNG/pen/GbVogZ)
 
 # resources
 - fetch to api call https://www.youtube.com/watch?v=uxf0--uiX0I&ab_channel=TheCodingTrain

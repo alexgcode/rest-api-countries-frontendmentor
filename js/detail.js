@@ -61,6 +61,7 @@ window.onload = async function () {
 
     let body = document.querySelector(".body");
     body.style.fontSize = '16px';
+    
 
     let url = document.location.href;
     let params = url.split('?')[1].split('&');

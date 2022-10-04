@@ -8,6 +8,7 @@ const searchValue = 'alpha?codes=ger,usa,br,is,afg,alb,alg,ax&&';
 const api_url = 'https://restcountries.com/v3.1/all?fields=name,capital,region,population,flags,region'; //alpha?codes=ger,usa,br,is,afg,alb,alg,ax&&fields=name,capital,region,population,flags';
 const moonDark = document.querySelector(".moon-dark");
 const moonLight = document.querySelector(".moon-light");
+const searchText = document.querySelector(".search-bar__text");
 let countriesList = [];
 let displayedCountries = [];
 
@@ -121,6 +122,7 @@ function checkDarkmodeStatus() {
         root.style.setProperty('--element-bg','hsl(209, 23%, 22%)');
         root.style.setProperty('--body-bg','hsl(207, 26%, 17%)');
         root.style.setProperty('--text-color','white');
+        searchText.style.backgroundImage = "url('./../images/icons8-search-dark.png')";
         moonDark.style.display = 'block';
         moonLight.style.display = 'none';
     }else {
@@ -129,6 +131,7 @@ function checkDarkmodeStatus() {
         root.style.setProperty('--element-bg','white');
         root.style.setProperty('--body-bg','hsl(0, 0%, 98%)');
         root.style.setProperty('--text-color','hsl(200, 15%, 8%)');
+        searchText.style.backgroundImage = "url('./../images/icons8-search_light.png')";
         moonDark.style.display = 'none';
         moonLight.style.display = 'block';
     }
@@ -147,6 +150,7 @@ function updateDarkmode(){
         root.style.setProperty('--element-bg','white');
         root.style.setProperty('--body-bg','hsl(0, 0%, 98%)');
         root.style.setProperty('--text-color','hsl(200, 15%, 8%)');
+        searchText.style.backgroundImage = "url('./../images/icons8-search_light.png')";
         moonDark.style.display = 'none';
         moonLight.style.display = 'block';
     }else {
@@ -155,6 +159,7 @@ function updateDarkmode(){
         root.style.setProperty('--element-bg','hsl(209, 23%, 22%)');
         root.style.setProperty('--body-bg','hsl(207, 26%, 17%)');
         root.style.setProperty('--text-color','white');
+        searchText.style.backgroundImage = "url('./../images/icons8-search-dark.png')";
         moonDark.style.display = 'block';
         moonLight.style.display = 'none';
     }
