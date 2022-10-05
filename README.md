@@ -12,10 +12,8 @@ This is a solution to the [REST Countries API with color theme switcher challeng
 - [My process](#my-process)
   - [Built with](#built-with)
   - [What I learned](#what-i-learned)
-  - [Continued development](#continued-development)
   - [Useful resources](#useful-resources)
 - [Author](#author)
-- [Acknowledgments](#acknowledgments)
 
 ## Overview
 
@@ -32,7 +30,11 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
+![](./screenshots/home.png)
+![](./screenshots/home_light.png)
+![](./screenshots/detail.png)
+![](./screenshots/home_mobile.png)
+![](./screenshots/detail_mobile.png)
 
 
 ### Links
@@ -63,7 +65,7 @@ Use of this css trick to make the grid responsive
 repeat(auto-fit, minmax(min(100%,200px),1fr)); 
 ```
 
-Adding a observer to detect changes in the dom.
+Adding an observer to detect changes in the dom.
 
 
 ### Useful resources
@@ -78,14 +80,11 @@ Adding a observer to detect changes in the dom.
 - hide scrollbars but keep functionality (https://www.w3schools.com/howto/howto_css_hide_scrollbars.asp)
 - validator of html markups (https://validator.w3.org/#validate_by_input+with_options)
 - use of observer to detect changes in the DOM (https://developer.mozilla.org/en-US/docs/Web/API/MutationObserver)
+- custom dropdown https://codepen.io/RajRajeshDn/pen/XWJYMzZ (https://codepen.io/STKNG/pen/GbVogZ)
 
 
 ## Author
 
-- Website - [alexgfcode](https://www.your-site.com)
+- Website - [alexgfcode](http://alexgfcode.me/)
 - Frontend Mentor - [@alexgcode](https://www.frontendmentor.io/profile/alexgcode)
 - linkedin - [@alexgarcia](https://www.linkedin.com/in/alex-martin-garcia-farfan/)
-
-# TODO
-- add custom selector https://codepen.io/RajRajeshDn/pen/XWJYMzZ (https://codepen.io/STKNG/pen/GbVogZ) (done)
-- add css to custom selector
