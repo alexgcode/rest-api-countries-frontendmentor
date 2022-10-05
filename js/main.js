@@ -30,10 +30,13 @@ function createDataGrid(data, grid) {
         card.className = 'country-card';
 
         let cardImage = document.createElement("div");
+        cardImage.innerText = `flag from ${country.name.common}`;      //trick for accesibility issues
+        cardImage.style.color = 'rgba(0, 0, 0, 0.0)';       //trick for accesibility issues
         cardImage.className = 'country-card__image';
         cardImage.style.backgroundImage = "url("+ country.flags.svg +")";
 
         let cardLink = document.createElement("a");
+        cardLink.style.textDecoration = 'none';     //for no underline
         cardLink.href = 'detail.html?country='+encodeURIComponent(country.name.common);
         cardLink.appendChild(cardImage);
 
