@@ -65,12 +65,8 @@
     }
 
     &__text {
-        //grid-row: 1;
-        //grid-column: 2;
-        //margin-left: -1rem;
         display: flex;
         flex-direction: column;
-        //height: 25rem;
     }
 
     &__name {
@@ -95,7 +91,6 @@
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
         gap: 1.5rem;
-        //grid-template: 1fr / repeat(2,1fr);
 
         @media screen and (min-width: 768px) {
             & {
@@ -139,7 +134,4 @@
     & p {
         margin: 1rem 0;
     }
-}
-
-.second-column {
 }
