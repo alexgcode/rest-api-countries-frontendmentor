@@ -9,6 +9,10 @@ const api_url = 'https://restcountries.com/v3.1/all?fields=name,capital,region,p
 const moonDark = document.querySelector(".moon-dark");
 const moonLight = document.querySelector(".moon-light");
 const searchText = document.querySelector(".search-bar__text");
+const searchInput = document.querySelector(".search-bar__text");
+const dropdownFilter = document.querySelector(".default_option");
+const darkmodeCheck = document.querySelector("#darkmodeCheck");
+let filterValue = '';
 let countriesList = [];
 let displayedCountries = [];
 
@@ -83,11 +87,12 @@ async function loadCountries() {
 
 
 /* ----------------- search filter to api ---------------*/
-const searchInput = document.querySelector(".search-bar__text");
+
 searchInput.addEventListener('keyup', e => {
+    console.log(filterValue);
     const c = countriesList.filter(country => {
         return country.name.common.toUpperCase().includes(searchInput.value.toUpperCase()) 
-                && country.region.toUpperCase().includes(dropdownFilter.value.toUpperCase());
+                && country.region.toUpperCase().includes(filterValue.toUpperCase());
     });
     //console.log(c);
     createDataGrid(c,grid);
@@ -95,19 +100,49 @@ searchInput.addEventListener('keyup', e => {
 
 
 /*--------- dropdown filter --------------*/
-const dropdownFilter = document.querySelector(".search-bar__filter");
+
+//console.log(dropdownFilter);
+
+observer = new MutationObserver(function(mutationsList, observer) {
+    mutationsList.forEach(function(mutation) {
+        for(const node of mutation.addedNodes) {
+            //console.log(node);
+            if (!node.tagName) continue;
+            if(node.classList.contains('option')){
+
+                if(node.classList.contains('all')) {
+                    filterValue = '';
+                }else {
+                    filterValue = node.childNodes[1].innerText;
+                }
+                
+                //console.log(node.childNodes[1].innerText);
+                const c = countriesList.filter(country => {
+                    return country.region.toUpperCase().includes(filterValue.toUpperCase()) 
+                                && (country.name.common.toUpperCase().includes(searchInput.value.toUpperCase()));
+                });
+                createDataGrid(c,grid);
+            }
+        }
+    });
+});
+observer.observe(dropdownFilter, { attributes: false, childList: true, subtree: true });
+
+/*
 dropdownFilter.addEventListener('change', e => {
+
     const c = countriesList.filter(country => {
         return country.region.toUpperCase().includes(dropdownFilter.value.toUpperCase()) 
                     && (country.name.common.toUpperCase().includes(searchInput.value.toUpperCase()));
     });
     createDataGrid(c,grid);
-    console.log(dropdownFilter.value);
+   
+    console.log("hola");
 });
-
+*/  
 
 /*-----darkmode in localstorage----*/
-const darkmodeCheck = document.querySelector("#darkmodeCheck");
+
 
 /*---default value---*/
 if(localStorage.getItem("darkmode") === null) {
@@ -164,3 +199,15 @@ function updateDarkmode(){
         moonLight.style.display = 'none';
     }
 }
+
+
+//dropdown 
+$(".default_option").click(function(){
+    $(this).parent().toggleClass("active");
+  })
+  
+  $(".select_ul li").click(function(){
+    var currentele = $(this).html();
+    $(".default_option li").html(currentele);
+    $(this).parents(".select_wrap").removeClass("active");
+  })

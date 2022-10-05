@@ -63,6 +63,9 @@ Use of this css trick to make the grid responsive
 repeat(auto-fit, minmax(min(100%,200px),1fr)); 
 ```
 
+Adding a observer to detect changes in the dom.
+
+
 ### Useful resources
 - fetch to api call (https://www.youtube.com/watch?v=uxf0--uiX0I&ab_channel=TheCodingTrain)
 - how to use localstorasge (https://www.youtube.com/watch?v=F6j_V6FUYTI&ab_channel=hdeleon.net)
@@ -74,6 +77,7 @@ repeat(auto-fit, minmax(min(100%,200px),1fr));
 - run js when dom is load (https://www.devdungeon.com/content/run-javascript-after-dom-fully-loaded)
 - hide scrollbars but keep functionality (https://www.w3schools.com/howto/howto_css_hide_scrollbars.asp)
 - validator of html markups (https://validator.w3.org/#validate_by_input+with_options)
+- use of observer to detect changes in the DOM (https://developer.mozilla.org/en-US/docs/Web/API/MutationObserver)
 
 
 ## Author
@@ -83,5 +87,5 @@ repeat(auto-fit, minmax(min(100%,200px),1fr));
 - linkedin - [@alexgarcia](https://www.linkedin.com/in/alex-martin-garcia-farfan/)
 
 # TODO
-- add custom selector https://codepen.io/RajRajeshDn/pen/XWJYMzZ (https://codepen.io/STKNG/pen/GbVogZ)
-
+- add custom selector https://codepen.io/RajRajeshDn/pen/XWJYMzZ (https://codepen.io/STKNG/pen/GbVogZ) (done)
+- add css to custom selector

@@ -7,6 +7,7 @@
 
     <link rel="stylesheet" href="./styles/main.css">
 
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
     <script defer src="./js/main.js"></script>
     <title>Document</title>
 </head>
@@ -25,8 +26,51 @@
     </header>
 
     <main class="main">
+        
         <div class="search-bar">
             <input class="search-bar__text" type="text" placeholder="Search for a country...">
+            <div class="select_wrap">
+                <ul class="default_option">
+                    <li>
+                        <div class="option default">
+                          <p>Filter by Region</p>
+                        </div>
+                    </li>
+                </ul>
+                <ul class="select_ul">
+                    <li>
+                        <div class="option all">
+                          <p>Filter by Region</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="option">
+                          <p>Africa</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="option">
+                          <p>Americas</p>
+                        </div>  
+                    </li>
+                    <li>
+                        <div class="option">
+                          <p>Asia</p>
+                        </div>  
+                    </li>
+                    <li>
+                        <div class="option ice">
+                          <p>Europe</p>
+                        </div>  
+                    </li>
+                    <li>
+                      <div class="option">
+                          <p>Oceania</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <!--
             <select class="search-bar__filter">
                 <option value="" selected>Filter by Region</option>
                 <option value="Africa">Africa</option>
@@ -35,7 +79,9 @@
                 <option value="Europe">Europe</option>
                 <option value="Oceania">Oceania</option>
             </select>
+            -->
         </div>
+
         
 
         <div class="countries-grid" >
